@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,60 @@
     <link rel="stylesheet" href="dist/output.css">
     <title>Shortly</title>
 </head>
-<body>
-    <h1 class="text-blue-700">Hello world!</h1>
+
+<body class="px-4 py-12">
+    <nav class="max-w-screen-xl m-auto">
+        <div class="flex items-center justify-between">
+            <img class="w-36" src="assets/media/logo.svg" alt="Shortly Logo">
+            <svg id="burger-icon" class="w-12 md:hidden" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <ul class="hidden md:flex w-full justify-between text-gray-400 font-bold text-lg items-center">
+                <div class="flex items-center">
+                    <li class="ml-12">
+                        <a href="#">Features</a>
+                    </li>
+                    <li class="ml-12">
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li class="ml-12">
+                        <a href="#">Resources</a>
+                    </li>
+                </div>
+                <div class="flex items-center">
+                    <li class="">
+                        <a href="#">Login</a>
+                    </li>
+                    <li class="ml-8 bg-cyan-400 p-2 w-36 text-center rounded-full text-white">
+                        <a href="#">Sign Up</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="mobile-menu-container hidden md:hidden mt-4 bg-violet-900 text-white p-4 text-center rounded-xl font-bold font-sans text-2xl">
+            <ul>
+                <li class="m-6">
+                    <a href="#">Features</a>
+                </li>
+                <li class="m-6">
+                    <a href="#">Pricing</a>
+                </li>
+                <li class="m-6">
+                    <a href="#">Resources</a>
+                </li>
+                <hr class="m-6 opacity-50">
+                <li class="m-6">
+                    <a href="#">Login</a>
+                </li>
+                <li class="bg-cyan-400 w-80 block ml-auto mr-auto my-6 p-2 rounded-full">
+                    <a href="#">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>
