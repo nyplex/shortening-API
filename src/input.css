@@ -9,4 +9,13 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .link-container {
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("../assets/media/bg-shorten-desktop.svg");
+        background-color: #3c1957;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 }
