@@ -21,4 +21,17 @@
     .max-w-280 {
         max-width: 280px;
     }
+
+    .left-middle {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-container {
+        background-image: url("../assets/media/bg-boost-desktop.svg");
+        background-color: #3c1957;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 }

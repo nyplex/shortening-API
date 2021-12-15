@@ -4,5 +4,8 @@
   },
   "scripts": {
     "tailwatch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
