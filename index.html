@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,23 +41,25 @@
             </ul>
         </div>
         <div id="mobile-menu" class="mobile-menu-container hidden md:hidden mt-4 bg-violet-900 text-white p-4 text-center rounded-xl font-bold font-sans text-2xl">
-            <ul>
-                <li class="m-6">
+            <ul class="">
+                <li class="m-6 md:ml-12 hover:text-cyan-400">
                     <a href="#">Features</a>
                 </li>
-                <li class="m-6">
+                <li class="m-6 md:ml-12 hover:text-cyan-400">
                     <a href="#">Pricing</a>
                 </li>
-                <li class="m-6">
+                <li class="m-6 md:ml-12 hover:text-cyan-400">
                     <a href="#">Resources</a>
                 </li>
-                <hr class="m-6 opacity-50">
-                <li class="m-6">
-                    <a href="#">Login</a>
-                </li>
-                <li class="bg-cyan-400 w-80 block ml-auto mr-auto my-6 p-2 rounded-full max-w-full">
-                    <a href="#">Sign Up</a>
-                </li>
+                <hr class="m-6 opacity-50 md:hidden">
+                <div class="md:flex md:items-center">
+                    <li class="m-6 hover:text-cyan-400">
+                        <a href="#">Login</a>
+                    </li>
+                    <li class="bg-cyan-400 w-80 md:w-36 md:text-center md:text-white block ml-auto mr-auto my-6 p-2 rounded-full max-w-full lg:ml-8 hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400 hover:cursor-pointer">
+                        <a href="#">Sign Up</a>
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>
@@ -69,7 +70,7 @@
                 <p class="text-2xl font-semibold font-sans text-gray-500 lg:text-left text-center">
                     Build your brand's recognition and get detailed insights on how your links are performing.
                 </p>
-                <button class="bg-cyan-400 text-white font-bold font-sans text-2xl p-2 w-60 rounded-full mt-12 ml-auto mr-auto block lg:inline-block hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400">Get Started</button>
+                <button class="btn text-2xl p-2 w-60 rounded-full mt-12 ml-auto mr-auto block lg:inline-block">Get Started</button>
             </div>
             <div>
                 <img src="assets/media/illustration-working.svg" alt="Working Illustration">
@@ -81,35 +82,35 @@
             <div class="flex flex-col lg:flex-row justify-around items-center mb-1 lg:mb-4">
                 <input class="h-16 w-11/12 lg:w-9/12 rounded-xl p-4 text-2xl mb-4 lg:mb-0" type="text" placeholder="Shorten a link here..." id="link-input">
                 <p class="-mt-2 font-semibold text-red-600 text-lg lg:hidden w-11/12 mb-4 lg:mb-0">Please add a link</p>
-                <button class="w-11/12 lg:w-2/12 bg-cyan-400 h-16 rounded-xl text-white font-bold font-sans text-2xl hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400">Shorten it!</button>
+                <button class="btn w-11/12 lg:w-2/12 h-16 rounded-xl text-2xl">Shorten it!</button>
             </div>
             <div>
                 <p class="hidden lg:block font-semibold text-red-600 text-lg lg:absolute lg:bottom-4 lg:left-8 w-11/12 mb-4">Please add a link</p>
             </div>
         </div>
         <div class="pt-40 lg:pt-20">
-            <div class="bg-white rounded-lg w-11/12 max-w-screen-xl m-auto flex flex-col lg:flex-row justify-between p-4 items-center mb-8">
-                <p class="text-2xl max-w-full w-full lg:w-7/12 font-semibold text-gray-800 break-all">https://wwww.frontendmentor.io</p>
+            <div class="generated-link-container">
+                <p class="original-link">https://wwww.frontendmentor.io</p>
                 <hr class="lg:hidden border-gray-300 w-8/12 my-4">
-                <div class="flex flex-col lg:flex-row justify-between lg:w-5/12 items-center w-full max-w-full">
-                    <p class="text-2xl max-w-full break-all w-full lg:w-9/12 text-left lg:mr-4 font-semibold text-cyan-400 lg:text-right">https://rel.ink/k4IKyk</p>
-                    <button class="bg-cyan-400 w-full lg:w-3/12 text-white rounded-lg py-2 mr-auto mt-4 lg:mt-0 max-w-280 hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400">Copy</button>
+                <div class="new-link-container">
+                    <p class="generated-link">https://rel.ink/k4IKyk</p>
+                    <button class="copy-btn btn">Copy</button>
                 </div>
             </div>
-            <div class="bg-white rounded-lg w-11/12 max-w-screen-xl m-auto flex flex-col lg:flex-row justify-between p-4 items-center mb-8">
-                <p class="text-2xl max-w-full w-full lg:w-7/12 font-semibold text-gray-800 break-all">https://wwww.frontendmentor.io</p>
+            <div class="generated-link-container">
+                <p class="original-link">https://wwww.frontendmentor.io</p>
                 <hr class="lg:hidden border-gray-300 w-8/12 my-4">
-                <div class="flex flex-col lg:flex-row justify-between lg:w-5/12 items-center w-full max-w-full">
-                    <p class="text-2xl max-w-full break-all w-full lg:w-9/12 text-left lg:mr-4 font-semibold text-cyan-400 lg:text-right">https://rel.ink/k4IKyk</p>
-                    <button class="bg-cyan-400 w-full lg:w-3/12 text-white rounded-lg py-2 mr-auto mt-4 lg:mt-0 max-w-280 hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400">Copy</button>
+                <div class="new-link-container">
+                    <p class="generated-link">https://rel.ink/k4IKyk</p>
+                    <button class="copy-btn btn">Copy</button>
                 </div>
             </div>
-            <div class="bg-white rounded-lg w-11/12 max-w-screen-xl m-auto flex flex-col lg:flex-row justify-between p-4 items-center mb-8">
-                <p class="text-2xl max-w-full w-full lg:w-7/12 font-semibold text-gray-800 break-all">https://wwww.frontendmentor.io</p>
+            <div class="generated-link-container">
+                <p class="original-link">https://wwww.frontendmentor.io</p>
                 <hr class="lg:hidden border-gray-300 w-8/12 my-4">
-                <div class="flex flex-col lg:flex-row justify-between lg:w-5/12 items-center w-full max-w-full">
-                    <p class="text-2xl max-w-full break-all w-full lg:w-9/12 text-left lg:mr-4 font-semibold text-cyan-400 lg:text-right">https://rel.ink/k4IKyk</p>
-                    <button class="bg-cyan-400 w-full lg:w-3/12 text-white rounded-lg py-2 mr-auto mt-4 lg:mt-0 max-w-280 hover:bg-cyan-500 hover:shadow-2xl shadow-cyan-400">Copy</button>
+                <div class="new-link-container">
+                    <p class="generated-link">https://rel.ink/k4IKyk</p>
+                    <button class="copy-btn btn">Copy</button>
                 </div>
             </div>
         </div>
@@ -118,39 +119,43 @@
             <p class="text-xl font-semibold font-sans text-gray-400 text-center mt-6">Track how your links are performing accross the web with our advanced statistics dashboard.</p>
         </div>
         <div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto justify-between mt-20 p-4 lg:p-12">
-            <div class="w-full lg:mb-4 mb-28 lg:w-4/12 bg-white rounded-lg shadow-lg p-8 relative lg:mr-8 lg:h-96">
-                <div class="bg-purple-900 p-6 rounded-full w-fit absolute -top-12 lg:left-20 left-middle">
+
+            <div class="lg:mb-4 mb-28 lg:mr-8 statistics-container">
+                <div class="icon-container">
                     <img src="assets/media/icon-brand-recognition.svg" alt="Brand Recognition Icon">
                 </div>
-                <h3 class="mt-8 text-gray-800 font-bold text-4xl mb-8 lg:text-left text-center">Brand Recognition</h3>
-                <p class="text-gray-400 font-semibold font-sans text-lg text-center lg:text-left">
+                <h3 class="statistics-title">Brand Recognition</h3>
+                <p class="statistic-text">
                     Boost your brand recognition with each click. Generic lnks don't mean a thing. Branded links help instal confidence in your content. 
                 </p>
             </div>
-            <div class="w-full lg:mb-4 lg:w-4/12 bg-white rounded-lg shadow-lg p-8 relative lg:mr-8 mb-28 lg:mt-20 lg:h-96">
-                <div class="bg-purple-900 p-6 rounded-full w-fit absolute -top-12 lg:left-20 left-middle">
+            
+            <div class="lg:mb-4 lg:mr-8 mb-28 lg:mt-20 statistics-container">
+                <div class="icon-container">
                     <img src="assets/media/icon-detailed-records.svg" alt="Detailed Record Icon">
                 </div>
-                <h3 class="mt-8 text-gray-800 font-bold text-4xl mb-8 lg:text-left text-center">Detailed Records</h3>
-                <p class="text-gray-400 font-semibold font-sans text-lg text-center lg:text-left">
+                <h3 class="statistics-title">Detailed Records</h3>
+                <p class="statistic-text">
                     Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions. 
                 </p>
             </div>
-            <div class="w-full mb-4 lg:w-4/12 bg-white rounded-lg shadow-lg p-8 relative lg:mt-40 lg:h-96">
-                <div class="bg-purple-900 p-6 rounded-full w-fit absolute -top-12 lg:left-20 left-middle">
+
+            <div class="mb-4 lg:mt-40 statistics-container">
+                <div class="icon-container">
                     <img src="assets/media/icon-fully-customizable.svg" alt="Fully Customizable Icon">
                 </div>
-                <h3 class="mt-8 text-gray-800 font-bold text-4xl mb-8 lg:text-left text-center">Fully Customizable</h3>
-                <p class="text-gray-400 font-semibold font-sans text-lg text-center lg:text-left">
+                <h3 class="statistics-title">Fully Customizable</h3>
+                <p class="statistic-text">
                     Improve brand awareness and content discoverability through customizable links, supercharging audiance engagement. 
                 </p>
             </div>
+
         </div>
     </main>
     <footer>
         <div class="footer-container py-12 px-4">
             <h2 class="text-white text-4xl lg:text-6xl font-bold font-sans text-center">Boost your links today</h2>
-            <button class="bg-cyan-400 text-white font-bold font-sans text-2xl py-4 w-60 rounded-full mt-12 ml-auto mr-auto block hover:bg-cyan-500 hover:shadow-2xl shadow-white">Get Started</button>
+            <button class="btn text-2xl py-4 w-60 rounded-full mt-12 ml-auto mr-auto block">Get Started</button>
         </div>
         <div class="bg-gray-900">
             <div class="flex lg:flex-row flex-col justify-around py-12 text-white max-w-screen-xl mx-auto">
@@ -158,35 +163,35 @@
                     <img class="mx-auto mb-8 lg:mb-0" src="assets/media/logo-white.svg" alt="Logo Illustration">
                 </div>
                 <div class="text-center lg:text-left mb-8 lg:mb-0">
-                    <h6 class="text-xl font-semibold lg:mb-6 mb-2">Features</h6>
-                    <ul class="text-gray-200 font-light">
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">Link Shortening</a></li>
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">Branded Links</a></li>
-                        <li><a class="hover:text-cyan-400" href="#">Analytics</a></li>
+                    <h6 class="fotter-section-title">Features</h6>
+                    <ul class="footer-list">
+                        <li class="mb-2"><a class="link" href="#">Link Shortening</a></li>
+                        <li class="mb-2"><a class="link" href="#">Branded Links</a></li>
+                        <li><a class="link" href="#">Analytics</a></li>
                     </ul>
                 </div>
                 <div class="text-center lg:text-left mb-8 lg:mb-0">
-                    <h6 class="text-xl font-semibold lg:mb-6 mb-2">Resources</h6>
-                    <ul class="text-gray-200 font-light">
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">Blog</a></li>
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">Developers</a></li>
-                        <li><a class="hover:text-cyan-400" href="#">Support</a></li>
+                    <h6 class="fotter-section-title">Resources</h6>
+                    <ul class="footer-list">
+                        <li class="mb-2"><a class="link" href="#">Blog</a></li>
+                        <li class="mb-2"><a class="link" href="#">Developers</a></li>
+                        <li><a class="link" href="#">Support</a></li>
                     </ul>
                 </div>
                 <div class="text-center lg:text-left">
-                    <h6 class="text-xl font-semibold lg:mb-6 mb-2">Company</h6>
-                    <ul class="text-gray-200 font-light">
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">About</a></li>
-                        <li class="mb-2"><a class="hover:text-cyan-400" href="#">Our Team</a></li>
-                        <li><a class="hover:text-cyan-400" href="#">Careers</a></li>
+                    <h6 class="fotter-section-title">Company</h6>
+                    <ul class="footer-list">
+                        <li class="mb-2"><a class="link" href="#">About</a></li>
+                        <li class="mb-2"><a class="link" href="#">Our Team</a></li>
+                        <li><a class="link" href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="flex flex-row justify-center mt-8 lg:mt-0">
-                        <li class="mr-4"><a href=""><i class="fab fa-facebook-square text-white text-4xl hover:text-cyan-400"></i></a></li>
-                        <li class="mr-4"><a href=""><i class="fab fa-twitter-square text-white text-4xl hover:text-cyan-400"></i></a></li>
-                        <li class="mr-4"><a href=""><i class="fab fa-pinterest-square text-white text-4xl hover:text-cyan-400"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram-square text-white text-4xl hover:text-cyan-400"></i></i></a></li>
+                        <li class="mr-4"><a href=""><i class="fab fa-facebook-square socials-icon"></i></a></li>
+                        <li class="mr-4"><a href=""><i class="fab fa-twitter-square socials-icon"></i></a></li>
+                        <li class="mr-4"><a href=""><i class="fab fa-pinterest-square socials-icon"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram-square socials-icon"></i></i></a></li>
                     </ul>
                 </div>
             </div>
