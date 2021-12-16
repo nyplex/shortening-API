@@ -1,3 +1,7 @@
+import './main.css';
+import { hello } from './hello';
+
+
 const burger = document.getElementById("burger-icon")
 const mobileMenu = document.getElementById("mobile-menu")
 
@@ -8,3 +12,5 @@ burger.addEventListener("click", (e) => {
         mobileMenu.classList.add("hidden")
     }
 })
+
+hello("Alex");

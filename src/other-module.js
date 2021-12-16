@@ -1,0 +1,1 @@
+export let spliting = () => console.log("Another Module");
