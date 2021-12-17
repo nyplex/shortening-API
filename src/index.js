@@ -1,7 +1,7 @@
-import './main.css';
+import './css/main.css';
 
-import { toggleNavbar } from './navbar';
-import { run } from './run';
+import { toggleNavbar } from './js/navbar';
+import { run } from './js/run';
 
 toggleNavbar()
 run()

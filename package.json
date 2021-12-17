@@ -15,6 +15,7 @@
   },
   "scripts": {
     "tailwatch": "tailwindcss -i ./src/input.css -o ./src/main.css --watch",
+    "tail": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css",
     "build": "webpack",
     "watch": "webpack watch"
   },
