@@ -2,12 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
-    devtool: "inline-source-map",
-    devServer: {
-        static: './dist/',
-    },
+    mode: "development",
     entry: "./src/index.js",
     output: {
         filename: "[name].[contenthash].js",
@@ -17,7 +16,7 @@ module.exports = {
     module: {
         rules: [
           {
-            test: /\.(html)$/,
+            test: /\.html$/,
             use: ["html-loader"]
          },
          {
@@ -27,18 +26,24 @@ module.exports = {
         ],
     },
     optimization: {
+        minimize: true,
         minimizer: [
           new CssMinimizerPlugin(),
+          new TerserPlugin()
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-          template: "index.html",
+          template: "./src/index.html",
           minify: true,
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css",
-          }),
+        }),
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+        })
     ],
 };

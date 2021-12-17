@@ -12,7 +12,7 @@
 <body class="pt-12">
     <nav class="max-w-screen-xl m-auto px-4">
         <div class="flex items-center justify-between">
-            <img class="w-36" src="assets/media/logo.svg" alt="Shortly Logo">
+            <img class="w-36" src="assets/logo.svg" alt="Shortly Logo">
             <svg id="burger-icon" class="w-12 md:hidden" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -73,22 +73,22 @@
                 <button class="btn text-2xl p-2 w-60 rounded-full mt-12 ml-auto mr-auto block lg:inline-block">Get Started</button>
             </div>
             <div>
-                <img src="assets/media/illustration-working.svg" alt="Working Illustration">
+                <img src="assets/illustration-working.svg" alt="Working Illustration">
             </div>
         </div>
     </header>
     <main class="w-full mt-40 relative bg-gray-200 pt-10 pb-4">
         <div class="link-container max-w-screen-xl m-auto absolute -top-20 rounded-xl w-11/12 lg:py-12 py-6">
             <div class="flex flex-col lg:flex-row justify-around items-center mb-1 lg:mb-4">
-                <input class="h-16 w-11/12 lg:w-9/12 rounded-xl p-4 text-2xl mb-4 lg:mb-0" type="text" placeholder="Shorten a link here..." id="link-input">
+                <input id="original-url-input" class="h-16 w-11/12 lg:w-9/12 rounded-xl p-4 text-2xl mb-4 lg:mb-0" type="text" placeholder="Shorten a link here..." id="link-input">
                 <p class="-mt-2 font-semibold text-red-600 text-lg lg:hidden w-11/12 mb-4 lg:mb-0">Please add a link</p>
-                <button class="btn w-11/12 lg:w-2/12 h-16 rounded-xl text-2xl">Shorten it!</button>
+                <button id="shorten" class="btn w-11/12 lg:w-2/12 h-16 rounded-xl text-2xl">Shorten it!</button>
             </div>
             <div>
-                <p class="hidden lg:block font-semibold text-red-600 text-lg lg:absolute lg:bottom-4 lg:left-8 w-11/12 mb-4">Please add a link</p>
+                <p id="error-display" class="hidden lg:block font-semibold text-red-600 text-lg lg:absolute lg:bottom-4 lg:left-8 w-11/12 mb-4"></p>
             </div>
         </div>
-        <div class="pt-40 lg:pt-20">
+        <div class="pt-40 lg:pt-20" id="links-container">
             <div class="generated-link-container">
                 <p class="original-link">https://wwww.frontendmentor.io</p>
                 <hr class="lg:hidden border-gray-300 w-8/12 my-4">
@@ -122,7 +122,7 @@
 
             <div class="lg:mb-4 mb-28 lg:mr-8 statistics-container">
                 <div class="icon-container">
-                    <img src="assets/media/icon-brand-recognition.svg" alt="Brand Recognition Icon">
+                    <img src="assets/icon-brand-recognition.svg" alt="Brand Recognition Icon">
                 </div>
                 <h3 class="statistics-title">Brand Recognition</h3>
                 <p class="statistic-text">
@@ -132,7 +132,7 @@
             
             <div class="lg:mb-4 lg:mr-8 mb-28 lg:mt-20 statistics-container">
                 <div class="icon-container">
-                    <img src="assets/media/icon-detailed-records.svg" alt="Detailed Record Icon">
+                    <img src="assets/icon-detailed-records.svg" alt="Detailed Record Icon">
                 </div>
                 <h3 class="statistics-title">Detailed Records</h3>
                 <p class="statistic-text">
@@ -142,7 +142,7 @@
 
             <div class="mb-4 lg:mt-40 statistics-container">
                 <div class="icon-container">
-                    <img src="assets/media/icon-fully-customizable.svg" alt="Fully Customizable Icon">
+                    <img src="./assets/icon-fully-customizable.svg" alt="Fully Customizable Icon">
                 </div>
                 <h3 class="statistics-title">Fully Customizable</h3>
                 <p class="statistic-text">
@@ -160,7 +160,7 @@
         <div class="bg-gray-900">
             <div class="flex lg:flex-row flex-col justify-around py-12 text-white max-w-screen-xl mx-auto">
                 <div>
-                    <img class="mx-auto mb-8 lg:mb-0" src="assets/media/logo-white.svg" alt="Logo Illustration">
+                    <img class="mx-auto mb-8 lg:mb-0" src="./assets/logo-white.svg" alt="Logo Illustration">
                 </div>
                 <div class="text-center lg:text-left mb-8 lg:mb-0">
                     <h6 class="fotter-section-title">Features</h6>
@@ -193,6 +193,7 @@
                         <li class="mr-4"><a href=""><i class="fab fa-pinterest-square socials-icon"></i></a></li>
                         <li><a href=""><i class="fab fa-instagram-square socials-icon"></i></i></a></li>
                     </ul>
+                    <h1 id="test"></h1>
                 </div>
             </div>
         </div>

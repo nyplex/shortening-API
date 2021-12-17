@@ -12,7 +12,7 @@
     .link-container {
         left: 50%;
         transform: translateX(-50%);
-        background-image: url("../assets/media/bg-shorten-desktop.svg");
+        background-image: url("assets/bg-shorten-desktop.svg");
         background-color: #3c1957;
         background-repeat: no-repeat;
         background-position: center;
@@ -28,7 +28,7 @@
     }
 
     .footer-container {
-        background-image: url("../assets/media/bg-boost-desktop.svg");
+        background-image: url("assets/bg-boost-desktop.svg");
         background-color: #3c1957;
         background-repeat: no-repeat;
         background-position: center;
