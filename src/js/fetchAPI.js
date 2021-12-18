@@ -24,7 +24,8 @@ let handleData = (data) => {
     if(data.ok) {
         const {code, original_link, short_link2} = data.result
         const link = new Link(code, original_link, short_link2)
-        console.log(link);
+        link.copy(link.shorten)
+        link.saveData()
     }else{
         displayErrors(data)
     }
