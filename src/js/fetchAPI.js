@@ -24,8 +24,11 @@ let handleData = (data) => {
     if(data.ok) {
         const {code, original_link, short_link2} = data.result
         const link = new Link(code, original_link, short_link2)
-        link.copy(link.shorten)
+        //link.copy(link.shorten)
+        $("#original-url-input").val("")
         link.saveData()
+        Link.displayData()
+        link.listenForCopy()
     }else{
         displayErrors(data)
     }

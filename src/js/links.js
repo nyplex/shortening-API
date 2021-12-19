@@ -3,51 +3,62 @@ export class Link {
         this.code = code
         this.original = original
         this.shorten = shorten
-        this.memory = []
-    }
-
-    copy(shorten) {
-        navigator.permissions.query({name: "clipboard-write"})
-        .then(result => {
-            if(result.state === "granted" || result.state === "prompt") {
-                this.updateClipboard(shorten)
-            }
-        })
-        .catch(error => {
-            console.log(error);
-        })
-    }
-
-    updateClipboard(value) {
-        navigator.clipboard.writeText(value)
-        .then(() => {
-            $("#shorten").text("Copied!")
-            setTimeout(() => {
-                $("#shorten").text("Shorten it!")
-            }, 2000);
-        }, () => {
-            console.log("copy failed!");
-        })
     }
 
     saveData() {
-        let linkDetails = [this]
-        let inStorage = JSON.parse(localStorage.getItem("links"))
-        if(inStorage.length >= 3) {
-            inStorage.shift()
-        }
-        inStorage.push(linkDetails)
-        localStorage.setItem("links", JSON.stringify(inStorage))
+        const linkDetails = this
+        const ls = localStorage
+        const link1 = ls.getItem("link1")
+        const link2 = ls.getItem("link2")
 
-        console.log(inStorage);
+        if(link1 == null || link1 == undefined) {
+            ls.setItem("link1", JSON.stringify(linkDetails))
+        }else if(link2 == null || link2 == undefined) {
+            ls.setItem("link1", JSON.stringify(linkDetails))
+            ls.setItem("link2", link1)
+        }else{
+            ls.setItem("link1", JSON.stringify(linkDetails))
+            ls.setItem("link2", link1)
+            ls.setItem("link3", link2)
+        }
+    }
+
+    static displayData() {
+        const ls = localStorage
+        const links = [ls.getItem("link1"), ls.getItem("link2"), ls.getItem("link3")]
+        $("#links-container").empty()
+        links.forEach(link => {
+            if(link == null) return
+            link = JSON.parse(link)
+            let html = `
+            <div class="generated-link-container">
+                <p class="original-link">${link.original}</p>
+                <hr class="lg:hidden border-gray-300 w-8/12 my-4">
+                <div class="new-link-container">
+                    <p class="generated-link">${link.shorten}</p>
+                    <button data-link="${link.shorten}" class="copy-btn btn">Copy</button>
+                </div>
+            </div>
+            `;
+            $("#links-container").append(html)
+        });
+    }
+
+    listenForCopy() {
+        $(".copy-btn").on("click", (e) => {
+            const shorten = $(e.target).attr("data-link")
+            navigator.permissions.query({name: "clipboard-write"})
+            .then(result => {
+                if(result.state === "granted" || result.state === "prompt") {
+                    navigator.clipboard.writeText(shorten)
+                    .then(() => {
+                        $(e.target).text("Copied!")
+                        setTimeout(() => {
+                            $(e.target).text("Shorten it!")
+                        }, 2000);
+                    })
+                }
+            })
+        })
     }
 }
-
-/*
-let save = {[{
-    code: Zw1354,
-    original: www.alex.com,
-    shorten: r3.w2sgF.com
-}]}
-
-*/
